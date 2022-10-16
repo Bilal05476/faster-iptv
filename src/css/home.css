@@ -1,0 +1,139 @@
+.home {
+  background-image: url("../assets//images//background-image.png"),
+    linear-gradient(#0c0a21, #06090c);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.home-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+.home-top .home-logos {
+  display: flex;
+  align-items: center;
+}
+.home-top .home-logos .home-logo-1 {
+  width: 100%;
+  height: 50px;
+}
+
+.home-top .home-logos .home-logo {
+  width: 120%;
+  height: 30px;
+}
+.home-top .weather-city {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.home-top .weather-city .weather-logo {
+  width: 30%;
+}
+.home-top .weather-city p {
+  margin-bottom: 0;
+  color: #fff;
+  margin-left: 1rem;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.weather-city p span {
+  font-weight: 500;
+}
+.home-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.home-center .play-choice-box {
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  border-radius: 2px;
+}
+.home-center .play-choice-box:hover {
+  transform: scale(1.05);
+}
+.home-center .play-choice-box img {
+  width: 100%;
+  height: 100px;
+}
+.home-center .play-choice-box p {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 0;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+.home-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+}
+.home-bottom .home-redirect-icons {
+  display: flex;
+  align-items: center;
+}
+.home-bottom .home-red .home-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.home-bottom .home-red.right {
+  margin-right: 2rem;
+}
+.home-bottom .home-red img {
+  width: 30%;
+  margin-right: 1rem;
+}
+.home-bottom .home-red span {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .home {
+    height: auto;
+  }
+  .home-top {
+    padding: 1.5rem 0.8rem;
+  }
+  .home-top .home-logos .home-logo {
+    width: 80%;
+  }
+  .home-top .home-logos .home-logo-1 {
+    width: 40%;
+  }
+  .home-top .weather-city .weather-logo {
+    width: 30%;
+  }
+  .home-top .weather-city p {
+    font-size: 0.6rem;
+  }
+  .home-center {
+    padding: 1rem;
+  }
+  .home-center .play-choice-box {
+    padding: 2rem 2.5rem;
+    margin: 1rem 0.25rem;
+  }
+  .home-center .play-choice-box img {
+    width: 90%;
+    height: 70px;
+  }
+  .home-bottom {
+    flex-direction: column;
+  }
+}
