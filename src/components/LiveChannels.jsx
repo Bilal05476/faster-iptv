@@ -5,7 +5,6 @@ import star from "../assets/icons/star.png";
 import channelIcon from "../assets/icons/channel.png";
 import channelImage from "../assets/images/channelimage.png";
 import play from "../assets/images/playerscreen.png";
-import { NavLink } from "react-router-dom";
 
 const LiveChannels = () => {
   const [view, setView] = useState(1);
