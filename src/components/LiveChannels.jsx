@@ -5,6 +5,7 @@ import star from "../assets/icons/star.png";
 import channelIcon from "../assets/icons/channel.png";
 import channelImage from "../assets/images/channelimage.png";
 import play from "../assets/images/playerscreen.png";
+import BackBtn from "./BackBtn";
 
 const LiveChannels = () => {
   const [view, setView] = useState(1);
@@ -85,6 +86,7 @@ const LiveChannels = () => {
               />
             </div>
           </div>
+          <BackBtn to="/home" text="Back" margin={"2rem"} />
         </div>
       )}
       {view === 2 && (

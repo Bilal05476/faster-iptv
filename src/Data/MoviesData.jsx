@@ -7,6 +7,14 @@ export const MovieName = [
   "Horror",
   "Action",
   "Malody",
+  "Action",
+  "Comedy",
+  "Romance",
+  "Fantasy",
+  "Mystery",
+  "Horror",
+  "Action",
+  "Malody",
 ];
 export const MovieCards = [
   {

@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import "../css/showsDetails.css";
 import { ShowsSeason, EpisodeDetails } from "../Data/ShowsSeason";
 import BackBtn from "./BackBtn";
@@ -11,10 +10,10 @@ const ShowsDetails = () => {
       <div className="seasonsSection">
         <h4 className="showsTitle">Stanger Things</h4>
         {ShowsSeason.map((item) => (
-          <NavLink className="seasonLink" to="/">
+          <div className="seasonLink">
             <h4>{item.season}</h4>
             <p>{item.episode}</p>
-          </NavLink>
+          </div>
         ))}
       </div>
       <div className="episodeSection">

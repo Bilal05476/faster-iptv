@@ -5,6 +5,8 @@ import MoviesDetails from "../components/MoviesDetails";
 import Movies from "../components/Movies";
 import Shows from "../components/Shows";
 import ShowsDetails from "../components/ShowsDetails";
+import Settings from "../components/Settings";
+
 export const Links = [
   { path: "/", element: <Login /> },
   { path: "/home", element: <Home /> },
@@ -13,4 +15,18 @@ export const Links = [
   { path: "/shows", element: <Shows /> },
   { path: "/movie-details", element: <MoviesDetails /> },
   { path: "/shows-details", element: <ShowsDetails /> },
+  { path: "/settings", element: <Settings /> },
+];
+
+export const AllSettings = [
+  "Network",
+  "Parental Control",
+  "Check For Updates",
+  "Application Info",
+  "Clear Cache",
+  "Manage Categories",
+  "Choose Live Player",
+  "Choose VOD Player",
+  "User Account",
+  "All Settings",
 ];

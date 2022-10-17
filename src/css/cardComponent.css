@@ -44,7 +44,12 @@
   max-height: 660px;
   overflow-y: auto;
 }
-.showCards::-webkit-scrollbar {
+.cardNames {
+  max-height: 460px;
+  overflow-y: auto;
+}
+.showCards::-webkit-scrollbar,
+.cardNames::-webkit-scrollbar {
   display: none;
 }
 .showCardLink {

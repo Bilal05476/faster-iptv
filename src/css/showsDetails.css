@@ -95,6 +95,7 @@
   margin: 1.5rem 0rem;
   text-decoration: none;
   border: 1px solid #06090c00;
+  cursor: pointer;
 }
 .seasonLink:hover {
   border: 1px solid var(--themeBlue--);

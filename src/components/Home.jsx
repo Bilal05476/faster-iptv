@@ -59,10 +59,10 @@ const Home = () => {
             text="Youtube"
             right={true}
           />
-          <HomeRed link={true} img={settings} to="/" text="Settings" />
+          <HomeRed link={true} img={settings} to="/settings" text="Settings" />
         </div>
         <div className="speed-text">
-          <HomeRed anchor={true} img={speedtext} href="#" text="Speed test" />
+          <HomeRed anchor={true} img={speedtext} href="/#" text="Speed test" />
         </div>
       </div>
     </div>

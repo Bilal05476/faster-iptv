@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import "../css/cardComponent.css";
 import { BsSearch } from "react-icons/bs";
 import { useState } from "react";
+import BackBtn from "./BackBtn";
 const CardsComponent = ({ showName, showCards, to }) => {
   const [searchInput, setSearchInput] = useState("");
   const handleCategory = (item) => {
@@ -29,15 +30,17 @@ const CardsComponent = ({ showName, showCards, to }) => {
           color="#ccc"
           size={20}
         />
-        {showName.map((item) => (
-          <h5
-            onClick={() => handleCategory(item)}
-            className="showName"
-            key={item}
-          >
-            {item}
-          </h5>
-        ))}
+        <div className="cardNames">
+          {showName.map((item) => (
+            <h5
+              onClick={() => handleCategory(item)}
+              className="showName"
+              key={item}
+            >
+              {item}
+            </h5>
+          ))}
+        </div>
       </div>
       <div className="showCards">
         {showCards.map((item) => (
@@ -45,10 +48,8 @@ const CardsComponent = ({ showName, showCards, to }) => {
             <img className="showCardImage" src={item.image} alt={item.sName} />
           </NavLink>
         ))}
-        <NavLink className="backBtn" to="/home">
-          Back
-        </NavLink>
       </div>
+      <BackBtn to="/home" text="Back" margin={"35rem 0rem"} />
     </div>
   );
 };

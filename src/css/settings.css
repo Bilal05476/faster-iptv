@@ -1,0 +1,72 @@
+.settings {
+  background-image: url("../assets//images//background-image.png"),
+    linear-gradient(#0c0a21, #06090c);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.settingsItems {
+  flex: 1;
+}
+.settingsNames .heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.settingsNames .heading .headingImg {
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+}
+.settingsNames .heading h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+}
+.settingsItems .settingName {
+  width: 91%;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  border: 1px solid #06090c00;
+}
+.settingsItems .settingName h5 {
+  font-weight: 500;
+  color: #fff;
+}
+.settingsItems .settingName span {
+  opacity: 0;
+  margin-left: -0.22rem;
+}
+.settingsItems .settingName:hover {
+  border: 1px solid #0b6dff;
+  /* padding-left: 0.5rem; */
+}
+.settingsItems .settingName:hover span {
+  opacity: 1;
+  margin-right: 0.2rem;
+}
+
+.showSetting {
+  flex: 2;
+  max-height: 660px;
+  overflow-y: auto;
+}
+.settingsNames {
+  max-height: 460px;
+  overflow-y: auto;
+}
+.showSetting::-webkit-scrollbar,
+.settingsNames::-webkit-scrollbar {
+  display: none;
+}
