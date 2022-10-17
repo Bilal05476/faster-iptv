@@ -13,10 +13,12 @@
   flex: 1;
 }
 .itemSearch input {
-  width: 90%;
+  width: 79%;
   background-color: transparent;
   border: 0.5px solid #ccc;
   padding: 0.5rem;
+  padding-left: 0.8rem;
+  padding-right: 3rem;
   color: #fff;
   outline: #0c0a21;
   text-transform: lowercase;
@@ -31,6 +33,7 @@
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   cursor: pointer;
+  border: 1px solid #06090c00;
 }
 .itemSearch .showName:hover {
   border: 1px solid #0b6dff;
@@ -38,12 +41,11 @@
 }
 .showCards {
   flex: 2;
-  height: 660px;
+  max-height: 660px;
   overflow-y: auto;
 }
 .showCards::-webkit-scrollbar {
-  /* display: none; */
-  width: 0.5rem;
+  display: none;
 }
 .showCardLink {
   width: 250px;

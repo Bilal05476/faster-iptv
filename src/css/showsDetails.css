@@ -1,0 +1,111 @@
+.showsDetail {
+  background-image: url("../assets//images//background-image.png"),
+    linear-gradient(#0c0a21, #06090c);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+}
+.showsDetail .showsTitle {
+  font-size: 2.3rem;
+  font-weight: 300;
+  color: #fff;
+}
+.seasonsSection,
+.episodeSection {
+  padding: 2rem;
+  max-height: 660px;
+  overflow-y: auto;
+}
+.seasonsSection {
+  padding-right: 6rem;
+  max-height: 500px;
+}
+.seasonsSection::-webkit-scrollbar,
+.episodeSection::-webkit-scrollbar {
+  display: none;
+}
+.episodeSection {
+  padding-bottom: 0;
+  flex: 2;
+}
+.episodeSection .episodeDetails {
+  background-color: #b2bec94b;
+  border-radius: 3px;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.episodeMedia {
+  display: flex;
+  align-items: center;
+}
+.episodeMedia img {
+  width: 200px;
+  height: 120px;
+}
+.episodeMedia .episodeText {
+  margin-left: 2rem;
+}
+.episodeText span {
+  color: #fff;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.episodeText .episodeName {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #fff;
+}
+.episodeText .episodeRatings {
+  margin-top: 0.8rem;
+}
+.episodeDurations {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.episodeDurations .date {
+  background-color: var(--themeBlue--);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  margin-bottom: 4.5rem;
+  color: #fff;
+  font-size: 0.8rem;
+}
+.episodeDurations .duration {
+  display: flex;
+  align-items: center;
+}
+.episodeDurations .duration span {
+  font-size: 0.8rem;
+  color: #fff;
+  margin-left: 0.3rem;
+}
+.seasonLink {
+  color: #fff;
+  padding: 0.5rem;
+  padding-left: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0rem;
+  text-decoration: none;
+  border: 1px solid #06090c00;
+}
+.seasonLink:hover {
+  border: 1px solid var(--themeBlue--);
+}
+.seasonLink h4 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.seasonLink p {
+  margin: 0;
+  color: rgba(204, 204, 204, 0.529);
+  font-weight: 300;
+}
