@@ -1,0 +1,72 @@
+.cardsComponent {
+  background-image: url("../assets//images//background-image.png"),
+    linear-gradient(#0c0a21, #06090c);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+}
+.itemSearch {
+  flex: 1;
+}
+.itemSearch input {
+  width: 90%;
+  background-color: transparent;
+  border: 0.5px solid #ccc;
+  padding: 0.5rem;
+  color: #fff;
+  outline: #0c0a21;
+  text-transform: lowercase;
+}
+.itemSearch .showName {
+  font-weight: 500;
+  color: #fff;
+  width: 91%;
+  padding: 0.5rem;
+  padding-left: 0.3rem;
+  padding-right: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.itemSearch .showName:hover {
+  border: 1px solid #0b6dff;
+  padding-left: 0.5rem;
+}
+.showCards {
+  flex: 2;
+  height: 660px;
+  overflow-y: auto;
+}
+.showCards::-webkit-scrollbar {
+  /* display: none; */
+  width: 0.5rem;
+}
+.showCardLink {
+  width: 250px;
+  height: 200px;
+  overflow: hidden;
+  margin: 1rem 0.5rem;
+}
+.showCardLink .showCardImage {
+  width: 150px;
+  height: 200px;
+}
+.showCardLink .showCardImage:hover {
+  transform: scale(1.03);
+}
+.backBtn {
+  position: absolute;
+  background-color: #76ace146;
+  padding: 1rem 2rem;
+  color: #fff;
+  cursor: pointer;
+  margin: 1.5rem 2rem;
+  text-decoration: none;
+  bottom: 0;
+  right: 0;
+  border-radius: 10px;
+}

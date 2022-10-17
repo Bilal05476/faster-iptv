@@ -36,14 +36,14 @@ const Home = () => {
           bgColor="lightblue"
         />
         <HomePlayBox
-          to="/live-channels"
+          to="/movies"
           icon={movies}
           text="Movies"
           alt="movies"
           bgColor="pink"
         />
         <HomePlayBox
-          to="/live-channels"
+          to="/shows"
           icon={shows}
           text="Shows"
           alt="shows"
