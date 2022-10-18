@@ -3,6 +3,7 @@ import { ShowsSeason, EpisodeDetails } from "../Data/ShowsSeason";
 import BackBtn from "./BackBtn";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { BiTimeFive } from "react-icons/bi";
+import { NavLink } from "react-router-dom";
 
 const ShowsDetails = () => {
   return (
@@ -18,7 +19,11 @@ const ShowsDetails = () => {
       </div>
       <div className="episodeSection">
         {EpisodeDetails.map((item) => (
-          <div key={item.episodeName} className="episodeDetails">
+          <NavLink
+            to="/shows-play"
+            key={item.episodeName}
+            className="episodeDetails"
+          >
             <div className="episodeMedia">
               <img src={item.episodeImage} alt={item.episodeName} />
               <div className="episodeText">
@@ -39,7 +44,7 @@ const ShowsDetails = () => {
                 <span>{item.episodeDuration}</span>
               </span>
             </div>
-          </div>
+          </NavLink>
         ))}
       </div>
       <BackBtn text="Back" to="/shows" margin={"38rem 2rem"} />

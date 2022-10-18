@@ -48,11 +48,13 @@
   opacity: 0;
   margin-left: -0.22rem;
 }
-.settingsItems .settingName:hover {
+.settingsItems .settingName:hover,
+.settingsItems .settingName.active {
   border: 1px solid #0b6dff;
-  /* padding-left: 0.5rem; */
 }
-.settingsItems .settingName:hover span {
+
+.settingsItems .settingName:hover span,
+.settingsItems .settingName.active span {
   opacity: 1;
   margin-right: 0.2rem;
 }
@@ -69,4 +71,58 @@
 .showSetting::-webkit-scrollbar,
 .settingsNames::-webkit-scrollbar {
   display: none;
+}
+.networkSettings,
+.parentalSettings {
+  background-color: #64a2ff46;
+  padding: 10rem 5rem;
+  border-radius: 5px;
+}
+.networkSettings h5,
+.networkSettings h4,
+.parentalSettings h4 {
+  color: #fff;
+  font-weight: 400;
+}
+.networkSettings h4,
+.parentalSettings h4 {
+  margin-bottom: 2rem;
+}
+.networkSettings .status {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+.networkSettings .status span,
+.parentalSettings input {
+  border: 1px solid var(--themeBlue--);
+  color: var(--themeBlue--);
+  padding: 0.5rem 4rem;
+  padding-left: 0.8rem;
+  width: 30%;
+  border-radius: 5px;
+}
+.parentalSettings input {
+  background-color: transparent;
+  margin-bottom: 1rem;
+  width: 50%;
+  outline: none;
+  color: #fff;
+}
+.parentalSettings input::placeholder {
+  color: var(--themeBlue--);
+}
+.networkSettings .btn,
+.parentalSettings .btn {
+  background-color: var(--themeBlue--);
+  padding: 1rem 3rem;
+  border: none !important;
+  outline: none !important;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  cursor: pointer;
 }

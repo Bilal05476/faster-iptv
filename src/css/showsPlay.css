@@ -1,0 +1,43 @@
+.showsPlay {
+  background-image: url("../assets//images//background-image.png"),
+    linear-gradient(#0c0a21, #06090c);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.showsPlay .showPlayContent {
+  padding: 15rem 10rem;
+  background-color: #06090c92;
+}
+.showsPlay .showPlayContent.play {
+  background-color: transparent;
+}
+
+.showPlayContent h4 {
+  color: #fff;
+  font-weight: 400;
+  width: 55%;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.showPlayContent button {
+  padding: 1rem 4rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: transparent;
+  margin-right: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--themeBlue--);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.showPlayContent button.btn1 {
+  background-color: var(--themeBlue--);
+}
+.showPlayContent button:hover {
+  background-color: var(--themeBlue--);
+}

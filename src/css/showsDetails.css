@@ -38,6 +38,7 @@
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 1rem;
+  text-decoration: none;
 }
 .episodeMedia {
   display: flex;
