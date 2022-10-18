@@ -21,11 +21,11 @@ export const Links = [
 ];
 
 export const AllSettings = [
-  // "Network",
+  "Network",
   "Parental Control",
-  // "Check For Updates",
-  // "Application Info",
-  // "Clear Cache",
+  "Check For Updates",
+  "Application Info",
+  "Clear Cache",
   "Manage Categories",
   // "Choose Live Player",
   // "Choose VOD Player",

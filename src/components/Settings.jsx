@@ -49,11 +49,44 @@ const Settings = () => {
         {settingName === "User Account" && (
           <AccountSetting
             data={[
-              { nName: "Registration Code", date: "10/10/2022 Monday" },
-              { nName: "Expiry Date", date: "12/10/2022 Monday" },
+              { nName: "Registration Code", status: "10/10/2022 Monday" },
+              { nName: "Expiry Date", status: "12/10/2022 Monday" },
             ]}
             btnTxt="Logout"
             heading={"Manage user accounts"}
+          />
+        )}
+        {settingName === "Network" && (
+          <AccountSetting
+            data={[
+              { nName: "Status", status: "Connected" },
+              { nName: "Network Type", status: "Wifi" },
+            ]}
+            btnTxt="Open Network Settings"
+            heading={"Manage user application network settings"}
+          />
+        )}
+        {settingName === "Check For Updates" && (
+          <AccountSetting
+            data={[{ status: "Application Version: 883838" }]}
+            heading={"Check for updates"}
+            smTxt="Latest version installed: No updates available!"
+          />
+        )}
+        {settingName === "Application Info" && (
+          <AccountSetting
+            data={[
+              { status: "Application Version: 883838" },
+              { status: "Application Version Code: 838383" },
+            ]}
+            heading={"Application Info"}
+          />
+        )}
+        {settingName === "Clear Cache" && (
+          <InputControl
+            data={[{ placeholder: "Enter your password" }]}
+            heading={"Manage your application cached data"}
+            btnTxt="Clear all cache"
           />
         )}
       </div>
@@ -78,17 +111,18 @@ const InputControl = ({ heading, data, btnTxt }) => {
   );
 };
 
-const AccountSetting = ({ data, heading, btnTxt }) => {
+const AccountSetting = ({ data, heading, btnTxt, smTxt }) => {
   return (
     <div className="networkSettings">
       <h4>{heading}</h4>
       {data.map((item) => (
         <div key={item.nName} className="status">
-          <h5>{item.nName}</h5>
-          <span>{item.date}</span>
+          {item.nName && <h5>{item.nName}</h5>}
+          <span>{item.status}</span>
         </div>
       ))}
-      <button className="btn">{btnTxt}</button>
+      {smTxt && <small style={{ color: "var(--themeBlue--)" }}>{smTxt}</small>}
+      {btnTxt && <button className="btn">{btnTxt}</button>}
     </div>
   );
 };

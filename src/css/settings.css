@@ -74,9 +74,11 @@
 }
 .networkSettings,
 .parentalSettings {
-  background-color: #64a2ff46;
+  background-color: #154389cd;
   padding: 10rem 5rem;
   border-radius: 5px;
+  min-height: 200px;
+  margin-top: 2rem;
 }
 .networkSettings h5,
 .networkSettings h4,
@@ -87,6 +89,7 @@
 .networkSettings h4,
 .parentalSettings h4 {
   margin-bottom: 2rem;
+  font-size: 1.3rem;
 }
 .networkSettings .status {
   display: flex;
@@ -100,7 +103,7 @@
   color: var(--themeBlue--);
   padding: 0.5rem 4rem;
   padding-left: 0.8rem;
-  width: 30%;
+  min-width: 40%;
   border-radius: 5px;
 }
 .parentalSettings input {
