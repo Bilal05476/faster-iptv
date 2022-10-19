@@ -103,7 +103,7 @@
   color: #fff;
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .home {
     height: auto;
   }
@@ -136,4 +136,4 @@
   .home-bottom {
     flex-direction: column;
   }
-}
+} */

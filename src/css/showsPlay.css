@@ -8,9 +8,13 @@
   flex-direction: column;
   min-height: 100vh;
 }
+
 .showsPlay .showPlayContent {
   padding: 15rem 10rem;
   background-color: #06090c92;
+}
+.showsPlay.two .showPlayContent {
+  padding: 12rem 10rem;
 }
 .showsPlay .showPlayContent.play {
   background-color: transparent;
@@ -35,9 +39,20 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-.showPlayContent button.btn1 {
-  background-color: var(--themeBlue--);
-}
+
 .showPlayContent button:hover {
   background-color: var(--themeBlue--);
+}
+.showsPlay .playMenuBtn {
+  display: flex;
+  flex-direction: column;
+}
+.showsPlay .playMenuBtn button {
+  width: 50%;
+  margin-bottom: 1rem;
+  text-align: left;
+  padding: 1rem 2rem;
+}
+.showsPlay .playerHeading {
+  margin-bottom: 1.5rem;
 }

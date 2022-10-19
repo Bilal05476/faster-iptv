@@ -7,16 +7,20 @@ import Shows from "../components/Shows";
 import ShowsDetails from "../components/ShowsDetails";
 import Settings from "../components/Settings";
 import ShowsPlay from "../components/ShowsPlay";
+// import ShowsPlay2 from "../components/ShowsPlay2";
+import LiveChannelPlay from "../components/LiveChannelPlay";
 
 export const Links = [
   { path: "/", element: <Login /> },
   { path: "/home", element: <Home /> },
   { path: "/live-channels", element: <LiveChannels /> },
+  { path: "/channel-play", element: <LiveChannelPlay /> },
   { path: "/movies", element: <Movies /> },
   { path: "/shows", element: <Shows /> },
   { path: "/movie-details", element: <MoviesDetails /> },
   { path: "/shows-details", element: <ShowsDetails /> },
   { path: "/shows-play", element: <ShowsPlay /> },
+  // { path: "/shows-play", element: <ShowsPlay2 /> },
   { path: "/settings", element: <Settings /> },
 ];
 
