@@ -20,7 +20,7 @@ const ShowsDetails = () => {
       <div className="episodeSection">
         {EpisodeDetails.map((item) => (
           <NavLink
-            to="/shows-play"
+            to="/player-screen"
             key={item.episodeName}
             className="episodeDetails"
           >

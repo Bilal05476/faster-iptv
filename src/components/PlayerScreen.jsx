@@ -1,26 +1,36 @@
 import "../css/playerScreen.css";
 import BackBtn from "./BackBtn";
-import exm from "../assets/exm.mp4";
+
+import { useState } from "react";
 const PlayerScreen = () => {
+  const [videoSrc, setVideoSrc] = useState(
+    "https://www.youtube.com/embed/0BIaDVnYp2A"
+  );
   return (
     <div className="playerScreen">
-      <BackBtn text={"Back"} margin={"1rem"} to="/home" />
-      <div
+      {/* <div
         style={{
           width: "100%",
           height: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          paddingTop: "3rem",
+          paddingTop: "0rem",
         }}
-      >
-        <video
-          src={exm}
-          controls
-          style={{ height: "80%", width: "80%" }}
-        ></video>
-      </div>
+      > */}
+      <iframe
+        max-width="1200px"
+        height="1000px"
+        style={{
+          border: "0px solid var(--themeBlue--)",
+          borderRadius: "5px",
+        }}
+        src={videoSrc}
+        allow="accelerometer; fullscreen; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen={true}
+      ></iframe>
+      {/* </div> */}
+      <BackBtn text={"Back"} margin={"2rem"} to="/home" />
     </div>
   );
 };

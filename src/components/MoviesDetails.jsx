@@ -2,7 +2,12 @@ import "../css/movieDetails.css";
 import BackBtn from "./BackBtn";
 import movies from "../assets/icons/movies.png";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 const MoviesDetails = () => {
+  const navigate = useNavigate();
+  const handleWatch = () => {
+    navigate("/player-screen");
+  };
   return (
     <div className="movieDetail">
       <div className="movieContent">
@@ -24,7 +29,7 @@ const MoviesDetails = () => {
           hic quod earum, iure laudantium cupiditate!
         </p>
         <div className="movieBtn">
-          <button>
+          <button onClick={() => handleWatch()}>
             <img src={movies} alt="play" />
             Watch Now
           </button>

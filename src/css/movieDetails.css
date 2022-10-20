@@ -54,6 +54,7 @@
   outline: none;
   border: 1px solid var(--themeBlue--);
   align-items: center;
+  text-decoration: none;
 }
 .movieBtn button:hover {
   background-color: #76ace146;

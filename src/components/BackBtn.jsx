@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const BackBtn = ({ to, text, margin }) => {
   const BackBtnStyle = {
     position: "absolute",
-    backgroundColor: "#76ace146",
+    backgroundColor: "#4a6b8da5",
     padding: "0.9rem 2rem",
     fontWeight: "500",
     color: "#fff",
