@@ -80,7 +80,7 @@ const LiveChannels = () => {
           />
         </div>
         <div className="channel-details">
-          <NavLink to="/channel-play">
+          <NavLink to="/player-screen">
             <img className="channel-img" src={channel.img} alt="channel" />
           </NavLink>
           <ChannelDetails
@@ -134,14 +134,3 @@ const ChannelDetails = ({ channelName, channelQuality, channelDuration }) => {
     </div>
   );
 };
-
-{
-  /* {view === 2 && (
-        <div className="playChannels">
-          <span className="play-back" onClick={() => setView(1)}>
-            Back
-          </span>
-          <img src={play} alt="play screen" />
-        </div>
-      )} */
-}

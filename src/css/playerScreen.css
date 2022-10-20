@@ -1,0 +1,11 @@
+.playerScreen {
+  background-image: url("../assets//images//background-image.png"),
+    linear-gradient(#0c0a21, #06090c);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-height: 100vh;
+}
