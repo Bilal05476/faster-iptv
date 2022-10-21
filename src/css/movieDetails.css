@@ -6,6 +6,7 @@
   background-size: cover;
   min-height: 100vh;
   display: flex;
+
   padding: 0rem 10rem;
 }
 .movieContent {
@@ -79,4 +80,20 @@
 }
 .movieMedia img:hover {
   transform: scale(1.02);
+}
+
+@media (max-width: 767px) {
+  .movieDetail {
+    padding: 2rem;
+    flex-direction: column;
+  }
+  .movieContent {
+    padding: 0rem;
+  }
+  .movieMedia {
+    justify-content: flex-start;
+  }
+  .movieMedia img {
+    width: 100%;
+  }
 }

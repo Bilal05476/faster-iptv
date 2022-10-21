@@ -22,10 +22,7 @@
   padding-right: 6rem;
   max-height: 500px;
 }
-/* .seasonsSection::-webkit-scrollbar,
-.episodeSection::-webkit-scrollbar {
-  display: none;
-} */
+
 .episodeSection {
   padding-bottom: 0;
   flex: 2;
@@ -67,7 +64,6 @@
 .episodeDurations {
   display: flex;
   flex-direction: column;
-
   align-items: center;
 }
 .episodeDurations .date {
@@ -110,4 +106,39 @@
   margin: 0;
   color: rgba(204, 204, 204, 0.529);
   font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  .showsDetail {
+    flex-direction: column;
+  }
+  .showsDetail .showsTitle {
+    font-size: 1.9rem;
+  }
+  .episodeSection .episodeDetails {
+    flex-direction: column;
+  }
+  .episodeMedia {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .episodeMedia .episodeText {
+    margin-left: 0rem;
+    margin-top: 1rem;
+  }
+  .episodeDurations {
+    margin-top: 1rem;
+    flex-direction: row;
+  }
+  .episodeDurations .date {
+    margin-bottom: 0rem;
+    margin-right: 2rem;
+  }
+  .episodeMedia img {
+    width: 113%;
+    height: 150px;
+  }
+  .seasonsSection {
+    margin-bottom: 2rem;
+  }
 }

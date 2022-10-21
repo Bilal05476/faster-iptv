@@ -9,16 +9,6 @@ const PlayerScreen = () => {
   );
   return (
     <div className="playerScreen">
-      {/* <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          paddingTop: "0rem",
-        }}
-      > */}
       <iframe
         controls
         max-width="1200px"
@@ -31,7 +21,7 @@ const PlayerScreen = () => {
         allow="accelerometer; fullscreen; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen={true}
       ></iframe>
-      {/* </div> */}
+
       <BackBtn text={"Back"} margin={"2rem"} to="/home" />
     </div>
   );

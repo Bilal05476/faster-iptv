@@ -14,7 +14,7 @@ const BackBtn = ({ to, text, margin }) => {
     fontSize: "1.2rem",
   };
   return (
-    <NavLink style={BackBtnStyle} to={to} className="playBack">
+    <NavLink style={BackBtnStyle} to={to} className="back-btn">
       {text}
     </NavLink>
   );

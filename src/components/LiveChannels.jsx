@@ -90,6 +90,7 @@ const LiveChannels = () => {
           />
         </div>
       </div>
+
       <BackBtn to="/home" text="Back" margin={"1.5rem 3rem"} />
     </div>
   );
