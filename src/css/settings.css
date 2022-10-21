@@ -68,10 +68,10 @@
   max-height: 460px;
   overflow-y: auto;
 }
-.showSetting::-webkit-scrollbar,
+/* .showSetting::-webkit-scrollbar,
 .settingsNames::-webkit-scrollbar {
   display: none;
-}
+} */
 .networkSettings,
 .parentalSettings {
   background-color: #154389cd;

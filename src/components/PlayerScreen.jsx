@@ -1,10 +1,11 @@
 import "../css/playerScreen.css";
 import BackBtn from "./BackBtn";
-
+import sampleVideo from "../assets/hero-jackets-closeup.mp4";
 import { useState } from "react";
 const PlayerScreen = () => {
   const [videoSrc, setVideoSrc] = useState(
-    "https://www.youtube.com/embed/0BIaDVnYp2A"
+    // "https://www.youtube.com/embed/0BIaDVnYp2A"
+    sampleVideo
   );
   return (
     <div className="playerScreen">
@@ -19,6 +20,7 @@ const PlayerScreen = () => {
         }}
       > */}
       <iframe
+        controls
         max-width="1200px"
         height="1000px"
         style={{

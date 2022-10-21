@@ -5,12 +5,16 @@ import { useState } from "react";
 import BackBtn from "./BackBtn";
 const CardsComponent = ({ showName, showCards, to }) => {
   const [searchInput, setSearchInput] = useState("");
-  const handleCategory = (item) => {
-    alert(`Hello ${item}`);
-  };
+  const [filteredCard, setFilteredCards] = useState([]);
   const handleSearch = () => {
-    alert(`Hello ${searchInput}`);
+    console.log(`Hello ${searchInput}`);
   };
+
+  const handleCategory = (startCat) => {
+    let frt = showCards.filter((item) => item.category.includes(startCat));
+    setFilteredCards(frt);
+  };
+
   return (
     <div className="cardsComponent">
       <div className="itemSearch">
@@ -43,11 +47,32 @@ const CardsComponent = ({ showName, showCards, to }) => {
         </div>
       </div>
       <div className="showCards">
-        {showCards.map((item) => (
-          <NavLink className="showCardLink" key={item.sName} to={to}>
-            <img className="showCardImage" src={item.image} alt={item.sName} />
-          </NavLink>
-        ))}
+        {filteredCard.length > 0 && (
+          <>
+            {filteredCard.map((item) => (
+              <NavLink className="showCardLink" key={item.sName} to={to}>
+                <img
+                  className="showCardImage"
+                  src={item.image}
+                  alt={item.sName}
+                />
+              </NavLink>
+            ))}
+          </>
+        )}
+        {filteredCard.length === 0 && (
+          <>
+            {showCards.map((item) => (
+              <NavLink className="showCardLink" key={item.sName} to={to}>
+                <img
+                  className="showCardImage"
+                  src={item.image}
+                  alt={item.sName}
+                />
+              </NavLink>
+            ))}
+          </>
+        )}
       </div>
       <BackBtn to="/home" text="Back" margin={"35rem 0rem"} />
     </div>

@@ -9,3 +9,14 @@
 :root {
   --themeBlue--: #0b6dff;
 }
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: #0c0a21;
+  /* border-radius: 10px; */
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, var(--themeBlue--) 0%, #0c0a21 100%);
+  border-radius: 10px;
+}

@@ -28,8 +28,8 @@
   overflow-y: auto;
   /* box-shadow: 1rem 10rem 10rem #06090c; */
 }
-.liveChannels .channel-list::-webkit-scrollbar {
-  /* display: none; */
+/* .liveChannels .channel-list::-webkit-scrollbar {
+
   width: 0.5rem;
 }
 .liveChannels .channel-list::-webkit-scrollbar-track {
@@ -39,7 +39,7 @@
 .liveChannels .channel-list::-webkit-scrollbar-thumb {
   background: linear-gradient(to top, #06090c 0%, #0c0a21 100%);
   border-radius: 10px;
-}
+} */
 .liveChannels .channel {
   display: flex;
   align-items: center;

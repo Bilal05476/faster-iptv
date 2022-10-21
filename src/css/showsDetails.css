@@ -22,10 +22,10 @@
   padding-right: 6rem;
   max-height: 500px;
 }
-.seasonsSection::-webkit-scrollbar,
+/* .seasonsSection::-webkit-scrollbar,
 .episodeSection::-webkit-scrollbar {
   display: none;
-}
+} */
 .episodeSection {
   padding-bottom: 0;
   flex: 2;
