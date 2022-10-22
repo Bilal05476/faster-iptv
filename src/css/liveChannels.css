@@ -91,7 +91,7 @@
 }
 @media (max-width: 767px) {
   .liveChannels {
-    padding: 1rem;
+    padding: 0rem 2rem;
   }
   .liveChannels .header img {
     width: 12%;

@@ -132,7 +132,9 @@
   .settings {
     flex-direction: column;
   }
-
+  .settingsItems {
+    width: 100%;
+  }
   .networkSettings,
   .parentalSettings {
     padding: 5rem 2rem;
