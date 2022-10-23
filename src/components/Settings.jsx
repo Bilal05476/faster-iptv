@@ -5,7 +5,7 @@ import { AllSettings } from "../Data/LinksData";
 import { AiFillCaretRight } from "react-icons/ai";
 import { useState } from "react";
 const Settings = () => {
-  const [settingName, setSettingName] = useState("Parental Control");
+  const [settingName, setSettingName] = useState("Network");
   return (
     <div className="settings">
       <div className="settingsItems">
