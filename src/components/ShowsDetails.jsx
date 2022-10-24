@@ -4,18 +4,36 @@ import BackBtn from "./BackBtn";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { BiTimeFive } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
+import { AiOutlineMenu } from "react-icons/ai";
+import { useState } from "react";
 
 const ShowsDetails = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="showsDetail">
       <div className="seasonsSection">
         <h4 className="showsTitle">Stanger Things</h4>
-        {ShowsSeason.map((item) => (
-          <div className="seasonLink">
-            <h4>{item.season}</h4>
-            <p>{item.episode}</p>
-          </div>
-        ))}
+        <AiOutlineMenu
+          className="collapse-list"
+          style={{
+            position: "absolute",
+            top: 27,
+            right: 15,
+            cursor: "pointer",
+          }}
+          size={28}
+          color="#fff"
+          onClick={() => setIsOpen(!isOpen)}
+        />
+        <div className={`seasonLinks ${isOpen ? "collapsed" : ""}`}>
+          {ShowsSeason.map((item) => (
+            <div className="seasonLink">
+              <h4>{item.season}</h4>
+              <p>{item.episode}</p>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="episodeSection">
         {EpisodeDetails.map((item) => (

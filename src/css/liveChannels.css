@@ -67,7 +67,8 @@
 }
 
 .liveChannels .channel-detail .child img.channel-star {
-  width: 10%;
+  width: 15px;
+  height: 15px;
 }
 .liveChannels .content {
   display: flex;
@@ -91,7 +92,7 @@
 }
 @media (max-width: 767px) {
   .liveChannels {
-    padding: 0rem 2rem;
+    padding: 0rem 1rem;
   }
   .liveChannels .header img {
     width: 12%;
@@ -113,5 +114,17 @@
   }
   .liveChannels .channel-details .channel-img {
     width: 98%;
+  }
+  .liveChannels .channel-list {
+    display: none;
+  }
+  .liveChannels .channel-list.collapsed {
+    display: block;
+    position: absolute;
+    background-color: #06090cc7;
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    width: 83%;
+    max-height: 600px;
   }
 }

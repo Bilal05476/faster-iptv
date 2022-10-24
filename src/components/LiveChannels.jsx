@@ -6,8 +6,10 @@ import channelIcon from "../assets/icons/channel.png";
 import channelImage from "../assets/images/channelimage.png";
 import BackBtn from "./BackBtn";
 import { NavLink } from "react-router-dom";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const LiveChannels = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [channel, setChannel] = useState({
     img: channelImage,
     cName: "MBC Channel",
@@ -20,9 +22,21 @@ const LiveChannels = () => {
       <div className="header">
         <img src={tv} alt="tv-channels" />
         <h4>Live Channels</h4>
+        <AiOutlineMenu
+          className="collapse-list"
+          style={{
+            position: "absolute",
+            top: 35,
+            right: 15,
+            cursor: "pointer",
+          }}
+          size={28}
+          color="#fff"
+          onClick={() => setIsOpen(!isOpen)}
+        />
       </div>
       <div className="content">
-        <div className="channel-list">
+        <div className={`channel-list ${isOpen ? "collapsed" : ""}`}>
           <Channel
             channelName={"MBC Channel"}
             channelQuality={`1 MBC > FHD`}
@@ -120,18 +134,25 @@ const Channel = ({ channelName, channelQuality, setChannel }) => {
 const ChannelDetails = ({ channelName, channelQuality, channelDuration }) => {
   return (
     <div className="channel-detail">
-      <div className="child">
-        <h4 className="channel-name">{channelName}</h4>
-        <img className="channel-star" src={star} alt="star" />
-      </div>
-      <div className="child">
-        <img src={channelIcon} alt="channel" />
-        <h4 className="channel-quality">{channelQuality}</h4>
-      </div>
-      <div className="child">
-        <img src={channelIcon} alt="channel" />
-        <h4 className="channel-quality">{channelDuration}</h4>
-      </div>
+      {[
+        {
+          channelText: channelName,
+          channelIcon: star,
+        },
+        {
+          channelText: channelQuality,
+          channelIcon: channelIcon,
+        },
+        {
+          channelText: channelDuration,
+          channelIcon: channelIcon,
+        },
+      ].map((item) => (
+        <div className="child">
+          <img className="channel-star" src={item.channelIcon} alt="channel" />
+          <h4 className="channel-quality">{item.channelText}</h4>
+        </div>
+      ))}
     </div>
   );
 };

@@ -135,10 +135,28 @@
     margin-right: 2rem;
   }
   .episodeMedia img {
-    width: 113%;
-    height: 150px;
+    width: 295px;
+    height: 146px;
   }
   .seasonsSection {
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
+    height: 40px;
+  }
+  .seasonsSection,
+  .episodeSection {
+    padding: 1rem;
+  }
+  .seasonLinks {
+    display: none;
+  }
+  .seasonLinks.collapsed {
+    display: block;
+    position: absolute;
+    background-color: #06090cc7;
+    backdrop-filter: blur(10px);
+    padding-bottom: 1rem;
+    width: 91.5%;
+    margin-top: 0.5rem;
+    max-height: 600px;
   }
 }

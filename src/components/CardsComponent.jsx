@@ -3,9 +3,12 @@ import "../css/cardComponent.css";
 import { BsSearch } from "react-icons/bs";
 import { useState } from "react";
 import BackBtn from "./BackBtn";
+import { AiOutlineMenu } from "react-icons/ai";
+
 const CardsComponent = ({ showName, showCards, to }) => {
   const [searchInput, setSearchInput] = useState("");
   const [filteredCard, setFilteredCards] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
   const handleSearch = () => {
     console.log(`Hello ${searchInput}`);
   };
@@ -34,6 +37,36 @@ const CardsComponent = ({ showName, showCards, to }) => {
           color="#ccc"
           size={20}
         />
+        <AiOutlineMenu
+          className="collapse-list"
+          style={{
+            position: "absolute",
+            top: 21,
+            right: 15,
+            cursor: "pointer",
+          }}
+          size={28}
+          color="#fff"
+          onClick={() => setIsOpen(!isOpen)}
+        />
+        {isOpen && (
+          <div className="collapse">
+            <div
+              className="cardNames collapsed"
+              style={{ height: isOpen ? "auto" : "10px" }}
+            >
+              {showName.map((item) => (
+                <h5
+                  onClick={() => handleCategory(item)}
+                  className="showName"
+                  key={item}
+                >
+                  {item}
+                </h5>
+              ))}
+            </div>
+          </div>
+        )}
         <div className="cardNames">
           {showName.map((item) => (
             <h5

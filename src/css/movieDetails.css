@@ -84,16 +84,18 @@
 
 @media (max-width: 767px) {
   .movieDetail {
-    padding: 2rem;
+    padding: 6rem 1rem;
+    padding-bottom: 2rem;
     flex-direction: column;
   }
   .movieContent {
     padding: 0rem;
   }
   .movieMedia {
-    justify-content: flex-start;
+    justify-content: center;
   }
   .movieMedia img {
-    width: 100%;
+    width: 90%;
+    height: 380px;
   }
 }

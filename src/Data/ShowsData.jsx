@@ -44,7 +44,7 @@ export const ShowCards = [
   },
   {
     sName: "Rock and Roll",
-    category: ["Movies World", "Amazon Movie"],
+    category: ["Movies World", "Netlfix"],
 
     image:
       "https://m.media-amazon.com/images/M/MV5BYjBiNmY3OTEtNjBmMy00NTU5LThjMjQtZjZlODBkNDM0MjU2XkEyXkFqcGdeQXVyNDI3NjU1NzQ@._V1_.jpg",
