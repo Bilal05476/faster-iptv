@@ -131,6 +131,10 @@
 @media (max-width: 767px) {
   .settings {
     flex-direction: column;
+    padding: 2rem 1rem;
+  }
+  .parentalSettings input {
+    width: 70%;
   }
   .settingsItems {
     width: 100%;
@@ -143,5 +147,40 @@
   .parentalSettings .btn {
     padding: 1rem;
     width: 100%;
+  }
+  .settingsNames .heading {
+    margin-bottom: 0rem;
+  }
+  .showSetting {
+    margin-top: -5rem;
+  }
+  .networkSettings h4,
+  .parentalSettings h4 {
+    text-align: center;
+  }
+  .networkSettings .status {
+    flex-direction: column;
+  }
+  .networkSettings .status h5 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  .networkSettings .status span {
+    text-align: center;
+    padding: 0.5rem 1rem;
+  }
+  .settingsItems .collapsed-menu {
+    display: none;
+  }
+  .collapsed-menu.collapsed {
+    display: block;
+    position: absolute;
+    background-color: #06090cc7;
+    backdrop-filter: blur(10px);
+    padding-bottom: 1rem;
+    padding: 0rem 1rem;
+    width: 91.5%;
+    margin-top: 0.5rem;
+    max-height: 600px;
   }
 }

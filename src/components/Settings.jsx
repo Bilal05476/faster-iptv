@@ -4,8 +4,11 @@ import BackBtn from "./BackBtn";
 import { AllSettings } from "../Data/LinksData";
 import { AiFillCaretRight } from "react-icons/ai";
 import { useState } from "react";
+import { AiOutlineMenu } from "react-icons/ai";
 const Settings = () => {
   const [settingName, setSettingName] = useState("Network");
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="settings">
       <div className="settingsItems">
@@ -13,16 +16,36 @@ const Settings = () => {
           <div className="heading">
             <img className="headingImg" src={SettingsImg} alt="setings" />
             <h4>Settings</h4>
+            <AiOutlineMenu
+              className="collapse-list"
+              style={{
+                position: "absolute",
+                top: 40,
+                right: 15,
+                cursor: "pointer",
+              }}
+              size={28}
+              color="#fff"
+              onClick={() => setIsOpen(!isOpen)}
+            />
           </div>
+
           {AllSettings.map((item) => (
             <div
-              onClick={() => setSettingName(item)}
-              className={`settingName ${settingName === item ? "active" : ""}`}
+              className={`collapsed-menu${isOpen ? "collapsed" : ""}`}
+              key={item}
             >
-              <span>
-                <AiFillCaretRight color="var(--themeBlue--)" size={13} />
-              </span>
-              <h5 key={item}>{item}</h5>
+              <div
+                onClick={() => setSettingName(item)}
+                className={`settingName ${
+                  settingName === item ? "active" : ""
+                }`}
+              >
+                <span>
+                  <AiFillCaretRight color="var(--themeBlue--)" size={13} />
+                </span>
+                <h5>{item}</h5>
+              </div>
             </div>
           ))}
         </div>
